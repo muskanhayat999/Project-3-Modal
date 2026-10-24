@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Modal Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <div class="content">
+            <p class="tagline">WELCOME TO MY WEBSITE</p>
+            <h1>Something on your mind?</h1>
+            <p class="description">
+                Have a question or idea? Open the popup
+                and send us a message.
+            </p>
+
+            <button type="button" id="openModal" class="open-btn">
+                Open Modal <span aria-hidden="true">↗</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Dark overlay and popup window -->
+    <div class="modal-overlay" id="modalOverlay">
+        <section class="modal-box"
+                 id="modalBox"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="modalTitle"
+                 aria-describedby="modalDescription">
+
+            <button type="button"
+                    class="close-icon"
+                    id="closeIcon"
+                    aria-label="Close modal">
+                &times;
+            </button>
+
+            <p class="tagline">LET'S CONNECT</p>
+            <h2 id="modalTitle">Contact Us</h2>
+            <p id="modalDescription" class="modal-description">
+                Tell us a little about what you have in mind.
+                We'd love to hear from you.
+            </p>
+
+            <form id="contactForm">
+                <label for="name">Your name</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       autocomplete="name"
+                       required>
+
+                <label for="email">Email address</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="you@example.com"
+                       autocomplete="email"
+                       required>
+
+                <label for="message">Your message</label>
+                <textarea id="message"
+                          name="message"
+                          rows="4"
+                          placeholder="Write your message..."
+                          required></textarea>
+
+                <button type="submit" class="submit-btn">
+                    Send Message
+                </button>
+
+                <button type="button"
+                        id="closeModal"
+                        class="cancel-btn">
+                    Cancel
+                </button>
+
+                <p id="successMessage"
+                   class="success-message"
+                   role="status"
+                   aria-live="polite"></p>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
